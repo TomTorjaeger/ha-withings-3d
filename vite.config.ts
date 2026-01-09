@@ -27,6 +27,6 @@ export default defineConfig({
     },
   },
   define: {
-    'process.env': {} // Verhindert Fehler mit Libraries, die process.env erwarten
+    'process.env.NODE_ENV': JSON.stringify('production'),
   }
 });
