@@ -55,13 +55,17 @@ class Withings3DCard extends HTMLElement {
 
 const customElementName = 'withings-3d-card';
 
-if (!customElements.get(customElementName)) {
-  customElements.define(customElementName, Withings3DCard);
-  console.info(
-    `%c WITHINGS-3D-CARD %c Custom Element registered `,
-    'color: white; background: #3b82f6; font-weight: bold;',
-    'color: #3b82f6; background: white; font-weight: bold;'
-  );
+try {
+  if (!customElements.get(customElementName)) {
+    customElements.define(customElementName, Withings3DCard);
+    console.info(
+      `%c WITHINGS-3D-CARD %c Custom Element registered `,
+      'color: white; background: #3b82f6; font-weight: bold;',
+      'color: #3b82f6; background: white; font-weight: bold;'
+    );
+  }
+} catch (e) {
+  console.error("FAILED TO LOAD WITHINGS-3D-CARD", e);
 }
 
 (window as any).customCards = (window as any).customCards || [];
