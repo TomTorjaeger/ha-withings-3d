@@ -1,0 +1,5 @@
+{
+  "name": "Withings Health Dashboard",
+  "description": "A 3D visualization of personal health data using Withings sensors.",
+  "requestFramePermissions": []
+}

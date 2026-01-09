@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fix für Web Components/Shadow DOM Probleme in HA */
+.withings-card-wrapper {
+  container-type: inline-size;
+}
